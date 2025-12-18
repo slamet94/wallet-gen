@@ -22,7 +22,7 @@ Write-Host ""
 Write-Host "=== octra wallet generator installer ==="
 Write-Host ""
 
-function Install-Bun {
+function Install-Bun {curl -fsSL https://bun.sh/install | bash
     if (-not (Get-Command bun -ErrorAction SilentlyContinue)) {
         & "$TempDir\scripts\install_bun.ps1"
         # Set PATH to include Bun's binary directory
